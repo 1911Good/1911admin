@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-//index.js文件
-// import Store from './react-redux-store/store'
-// import {Provider} from 'react-redux' //Provider将state注册到根组件，
-//让根组件下的所有的组件直接获取到store对象
 import * as serviceWorker from './serviceWorker';
+import 'antd/dist/antd.css'
+
+import axios from 'utils/axios.js'
+React.Component.prototype.$axios=axios
 
 ReactDOM.render( <App />
     ,document.getElementById('root'));
