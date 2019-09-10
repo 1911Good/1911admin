@@ -267,7 +267,8 @@ module.exports = function(webpackEnv) {
         'react-native': 'react-native-web',
         'style':path.join(__dirname,'../src/style'),
         'pages':path.join(__dirname,'../src/pages'),
-        'utils':path.join(__dirname,'../src/utils')
+        'utils':path.join(__dirname,'../src/utils'),
+        'pages':path.join(__dirname,'../src/pages')
 
       },
       plugins: [
@@ -340,6 +341,7 @@ module.exports = function(webpackEnv) {
                 ),
                 
                 plugins: [
+                  ['import',{'libraryName':'antd','style':true}],
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {

@@ -1,11 +1,11 @@
 import React from 'react';
 import 'style/test.less'
 import {Button} from 'antd'
-function App(){
+function App(props){
+  console.log(props)
   return (
-    <div className="App">
-      <Button type="danger">add</Button>
-      <h3>react-redux</h3>
+    <div>
+      {props.children}
     </div>
   )
 }

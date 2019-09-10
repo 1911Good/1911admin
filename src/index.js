@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 
+import RootRouter from './router'
 import * as serviceWorker from './serviceWorker';
-import 'antd/dist/antd.css'
+//全局引入
+// import 'antd/dist/antd.css'
 
 import axios from 'utils/axios.js'
 React.Component.prototype.$axios=axios
 
-ReactDOM.render( <App />
+ReactDOM.render( <RootRouter />
     ,document.getElementById('root'));
 
 
